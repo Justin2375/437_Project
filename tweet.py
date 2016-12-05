@@ -1,7 +1,7 @@
 import tweepy
 import sys
 from textblob import TextBlob
-from Credentials import secret
+from credentials import secret
 
 cons_key = secret['cons_key']
 sec_cons_key = secret['sec_cons_key']
