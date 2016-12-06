@@ -6,6 +6,7 @@ from textblob import TextBlob
 from credentials import secret
 import pygal
 from pygal.style import DarkSolarizedStyle
+from flask_bootstrap import Bootstrap
 dist={}
 
 app = Flask(__name__)
@@ -100,4 +101,9 @@ def calculateSentiment(topic):
 
 if __name__ == '__main__':
     #print(calculateSentiment())
+    def create_app():
+        app = Flask(__name__)
+        Bootstrap(app)
+
+        return app
     app.run(debug=True)
