@@ -17,6 +17,7 @@ def index_post():
 
     text = request.form['topic']
     sentiments = calculateSentiment(text)
+    print(sentiments)
     def find_sent(sentiments):
         dist = {'Positive': 0,'Neutral': 0, 'Negative': 0, 'Average':0.0}
 
@@ -61,8 +62,8 @@ def calculateSentiment(topic):
         tweetsList.append((tweet.text,sentiment.sentiment.polarity))
     return tweetsList
 
-@app.route("/simple.png")
-def simple():
+#@app.route("/simple.png")
+#def simple():
 
 
 
